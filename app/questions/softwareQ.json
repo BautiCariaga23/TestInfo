@@ -1,0 +1,28 @@
+{
+    "questions": [
+        {
+            "q": "¿Cual de los siguientes sistemas operativos es de codigo abierto?",
+            "st": "Windows",
+            "nd": "MacOS",
+            "rd": "Linux",
+            "th": "Android",
+            "c":2
+        },
+        {
+            "q": "¿Cual de los siguientes programas se utiliza comunmente para crear presentaciones?",
+            "st": "Microsoft Word",
+            "nd": "Adobe Photoshop",
+            "rd": "Microsoft Excel",
+            "th": "Microsoft PowerPoint",
+            "c":3
+        },
+        {
+            "q": "¿Cual de los siguientes formatos de archivo es ampliamente utilizado para comprimir archivos?",
+            "st": ".MP3",
+            "nd": ".RAR",
+            "rd": ".PDF",
+            "th": ".JPG",
+            "c":1
+        }
+]
+}
