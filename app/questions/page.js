@@ -6,11 +6,12 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 export default function Preguntas() {
     const data = useSearchParams()
+    const maxTime = 15;
     const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random()*softwareq.questions.length));
     const [hasSelected, setHasSelected] = useState(false);
     const [option, setOption] = useState(0);
     const [points, setPoints] = useState(0);
-    const [timer, setTimer] = useState(10);
+    const [timer, setTimer] = useState(maxTime);
     const [timerStarted, setTimerStarted] = useState(false);
     if(!timerStarted){
         setTimeout(()=>{
@@ -37,7 +38,7 @@ export default function Preguntas() {
                     setRandomNumber(Math.floor(Math.random()*softwareq.questions.length))
                     setHasSelected(false)
                 }
-                setTimer(10);
+                setTimer(maxTime);
                 setTimerStarted(false)
             },4000)
            
@@ -63,19 +64,19 @@ export default function Preguntas() {
                 </div>
                 <h1 className=
                 {`${hasSelected ? option == softwareq.questions[randomNumber].c ? 'show mb-24 rotate-3' : 'hide' : ''} 
-                absolute text-lime-500 text-8xl bg-transparent duration-[1s]`}>CORRECTO!</h1>
+                absolute text-lime-500 text-7xl md:text-8xl bg-transparent duration-[1s]`}>CORRECTO!</h1>
                 <h1 className=
                 {`${hasSelected ? option == softwareq.questions[randomNumber].c ? 'hide' : 'show' : ''} 
-                absolute text-red-500 text-8xl bg-transparent`}>INCORRECTO!</h1>
+                absolute text-red-500 text-7xl md:text-8xl bg-transparent`}>INCORRECTO!</h1>
             </div>
             <div className='flex justify-between p-3'>
             <h1 className='text-gray-400 text-xl'>-{data.get('theme')}</h1>
-            <h1 className='text-white text-2xl mr-10'>Score: {points}</h1>
+            <h1 className='text-white text-2xl mr-10'>PUNTOS: {points}</h1>
             <h1 className={`text-3xl ${hasSelected>0 ? '' : 'animate-bounce'} 
             border-2 border-gray-300 text-gray-300 rounded-full w-10 text-center`}>{timer}</h1>
             </div>
             <div className='grid place-items-center pt-12'>
-                <h1 className='font-bolder text-white text-4xl md:w-[900px] text-center'>
+                <h1 className='font-bolder text-white text-4xl lg:w-[900px] text-center'>
                     {softwareq.questions[randomNumber].q}
                 </h1>
                 <hr className='border-[1px] mt-9 border-gray-400 w-full'/>
@@ -121,7 +122,7 @@ export default function Preguntas() {
                         {softwareq.questions[randomNumber].th}</button>
                 </div>
             </div>
-            <footer className='absolute bottom-4 p-3 text-white'>
+            <footer className='absolute flex justify-between w-full bottom-4 p-3 text-white'>
             <Link href={"/"}><div className='flex'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
             stroke="currentColor" class="w-5 h-5 mr-1">
@@ -130,6 +131,9 @@ export default function Preguntas() {
 
                 <p>Volver al inicio</p>
                 </div></Link>
+                <div>
+                <p className='text-lg text-gray-700'>PARTIDA DE: {data.get('name')}</p>
+                </div>
             </footer>
         </main>
     )
