@@ -14,7 +14,7 @@ export default function Register() {
   return (
     <main className='h-screen grid place-items-center'>
         <div className='grid place-items-center'>
-        <h1 className='text-white text-6xl'>Antes de empezar!</h1>
+        <h1 className='text-white text-6xl text-center'>Antes de empezar!</h1>
         <div className='mt-10 grid place-items-center'>
             <input onChange={handleOnChange} placeholder='Tu nombre completo' className='block mb-5 p-2 rounded-lg text-black
              focus:outline-none bg-white focus:rounded-xl focus:border-2 border-rose-500 duration-150'></input>

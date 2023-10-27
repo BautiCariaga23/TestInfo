@@ -87,7 +87,7 @@ export default function Preguntas() {
                         }
                         
                     }} className={`${hasSelected ? 0 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                     ${hasSelected ? 'text-white': 'text-black'} hover:bg-gray-400 hover:text-white hover:translate-y-[-5px] duration-150`}>
+                     ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].st}</button>
 
                     <button onClick={()=>{
@@ -97,7 +97,7 @@ export default function Preguntas() {
                         }
                         
                     }} className={`${hasSelected ? 1 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                    ${hasSelected ? 'text-white': 'text-black'} hover:bg-gray-400 hover:text-white hover:translate-y-[-5px] duration-150`}>
+                    ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].nd}</button>
                         
                     <button onClick={()=>{
@@ -107,7 +107,7 @@ export default function Preguntas() {
                         }
                         
                     }} className={`${hasSelected ? 2 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                    ${hasSelected ? 'text-white': 'text-black'} hover:bg-gray-400 hover:text-white hover:translate-y-[-5px] duration-150`}>
+                    ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].rd}</button>
 
                     <button onClick={()=>{
@@ -117,7 +117,7 @@ export default function Preguntas() {
                         }
                        
                     }} className={`${hasSelected ? 3 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                     ${hasSelected ? 'text-white': 'text-black'} hover:bg-gray-400 hover:text-white hover:translate-y-[-5px] duration-150`}>
+                     ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].th}</button>
                 </div>
             </div>
