@@ -69,18 +69,18 @@ export default function Preguntas() {
                 {`${hasSelected ? option == softwareq.questions[randomNumber].c ? 'hide' : 'show' : ''} 
                 absolute text-red-500 text-7xl md:text-8xl bg-transparent`}>INCORRECTO!</h1>
             </div>
-            <div className='flex justify-between p-3'>
+            <div className='flex justify-between py-3 px-1'>
             <h1 className='text-gray-400 text-xl'>-{data.get('theme')}</h1>
             <h1 className='text-white text-2xl mr-10'>PUNTOS: {points}</h1>
             <h1 className={`text-3xl ${hasSelected>0 ? '' : 'animate-bounce'} 
             border-2 border-gray-300 text-gray-300 rounded-full w-10 text-center`}>{timer}</h1>
             </div>
             <div className='grid place-items-center pt-12'>
-                <h1 className='font-bolder text-white text-4xl lg:w-[900px] text-center'>
+                <h1 className='font-bolder h-36 text-white text-3xl md:text-4xl px-1 md:px-0 lg:w-[900px] text-center'>
                     {softwareq.questions[randomNumber].q}
                 </h1>
                 <hr className='border-[1px] mt-9 border-gray-400 w-full'/>
-                <div className='grid mt-16'>
+                <div className='grid mt-2 overflow-hidden w-full place-items-center'>
                     <button onClick={()=>{
                         if(!hasSelected && timer >0){
                             setOption(0)
@@ -88,7 +88,8 @@ export default function Preguntas() {
                         }
                         
                     }} className={`${hasSelected ? 0 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                     ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
+                     ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
+                     hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].st}</button>
 
                     <button onClick={()=>{
@@ -98,7 +99,8 @@ export default function Preguntas() {
                         }
                         
                     }} className={`${hasSelected ? 1 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                    ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
+                    ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
+                     hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].nd}</button>
                         
                     <button onClick={()=>{
@@ -108,7 +110,8 @@ export default function Preguntas() {
                         }
                         
                     }} className={`${hasSelected ? 2 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                    ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
+                    ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
+                    hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].rd}</button>
 
                     <button onClick={()=>{
@@ -118,7 +121,8 @@ export default function Preguntas() {
                         }
                        
                     }} className={`${hasSelected ? 3 == softwareq.questions[randomNumber].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                     ${hasSelected ? 'text-white': 'text-black'} hover:${hasSelected ? '' : 'bg-gray-400'} hover:text-white hover:translate-y-[-5px] duration-150`}>
+                     ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
+                    hover:text-white hover:translate-y-[-5px] duration-150`}>
                         {softwareq.questions[randomNumber].th}</button>
                 </div>
             </div>
@@ -132,7 +136,7 @@ export default function Preguntas() {
                 <p>Volver al inicio</p>
                 </div></Link>
                 <div>
-                <p className='text-lg text-gray-700'>PARTIDA DE: {data.get('name')}</p>
+                <p className='text-lg text-gray-700 pr-2'>{data.get('name')}</p>
                 </div>
             </footer>
         </main>
