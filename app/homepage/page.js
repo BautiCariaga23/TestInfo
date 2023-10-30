@@ -19,10 +19,16 @@ export default function HomePage() {
             query: { theme: 'Software'},
             }}><button className='bg-white text-black mt-5 shadow-none tracking-wider p-3 w-64 text-4xl rounded-lg
             hover:scale-105 hover:bg-rose-700 hover:text-white duration-150'>Software</button></Link>
-            <button className='bg-white shadow-none tracking-wider p-3 w-64 text-4xl rounded-lg
-            hover:scale-105 text-black hover:text-white hover:bg-rose-700 duration-150'>General</button>
-            <button className='bg-white shadow-none tracking-wider p-3 w-64 text-4xl rounded-lg
-            hover:scale-105 text-black hover:text-white hover:bg-rose-700 duration-150'>Hardware</button>
+            <Link href={{
+            pathname: '/register',
+            query: { theme: 'General'},
+            }}><button className='bg-white shadow-none tracking-wider p-3 w-64 text-4xl rounded-lg
+            hover:scale-105 text-black hover:text-white hover:bg-rose-700 duration-150'>General</button></Link>
+            <Link href={{
+            pathname: '/register',
+            query: { theme: 'Hardware'},
+            }}><button className='bg-white shadow-none tracking-wider p-3 w-64 text-4xl rounded-lg
+            hover:scale-105 text-black hover:text-white hover:bg-rose-700 duration-150'>Hardware</button></Link>
         </div>
         </div>
         </main>

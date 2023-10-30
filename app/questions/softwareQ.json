@@ -23,6 +23,30 @@
             "rd": ".PDF",
             "th": ".JPG",
             "c":1
+        },
+        {
+            "q": "¿Cual de los siguientes programas se utiliza comunmente para navegar por sitios web en internet?",
+            "st": "Microsoft Word",
+            "nd": "Adobe Photoshop",
+            "rd": "Google Chrome",
+            "th": "iTunes",
+            "c":2
+        },
+        {
+            "q": "¿Cual de las siguientes opciones es un sistema operativo movil desarrollado por Google?",
+            "st": "Windows",
+            "nd": "iOS",
+            "rd": "Linux",
+            "th": "Android",
+            "c":3
+        },
+        {
+            "q": "¿Cual de los siguientes programas te ofrece una hoja de calculo?",
+            "st": "Excel",
+            "nd": "Powerpoint",
+            "rd": "Word",
+            "th": "Bloc de notas",
+            "c":0
         }
 ]
 }

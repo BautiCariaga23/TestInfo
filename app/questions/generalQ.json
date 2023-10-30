@@ -1,0 +1,100 @@
+{
+    "questions": [
+        {
+            "q": "¿Cual de los siguientes componentes de hardware almacena temporalmente los datos de la computadora y permite un acceso mas rapido a ellos?",
+            "st": "Disco duro",
+            "nd": "Memoria RAM",
+            "rd": "Procesador",
+            "th": "Placa de video",
+            "c":1
+        },
+        {
+            "q": "¿Cual de los siguientes dispositivos de entrada se utiliza comunmente para apuntar y hacer clic en objetos en la pantalla de una computadora?",
+            "st": "Teclado",
+            "nd": "Monitor",
+            "rd": "Mouse",
+            "th": "Gabinete",
+            "c":2
+        },
+        {
+            "q": "¿Que tipo de dispositivo se utiliza para mostrar informacion visual en una computadora?",
+            "st": "Monitor",
+            "nd": "Impresora",
+            "rd": "Escaner",
+            "th": "Altavoz",
+            "c":0
+        },
+        {
+            "q": "¿Cual de los siguientes sistemas operativos es de codigo abierto?",
+            "st": "Windows",
+            "nd": "MacOS",
+            "rd": "Linux",
+            "th": "Android",
+            "c":2
+        },
+        {
+            "q": "¿Cual de los siguientes programas se utiliza comunmente para crear presentaciones?",
+            "st": "Microsoft Word",
+            "nd": "Adobe Photoshop",
+            "rd": "Microsoft Excel",
+            "th": "Microsoft PowerPoint",
+            "c":3
+        },
+        {
+            "q": "¿Cual de los siguientes formatos de archivo es ampliamente utilizado para comprimir archivos?",
+            "st": ".MP3",
+            "nd": ".RAR",
+            "rd": ".PDF",
+            "th": ".JPG",
+            "c":1
+        },
+        {
+            "q": "¿Cual de los siguientes programas se utiliza comunmente para navegar por sitios web en internet?",
+            "st": "Microsoft Word",
+            "nd": "Adobe Photoshop",
+            "rd": "Google Chrome",
+            "th": "iTunes",
+            "c":2
+        },
+        {
+            "q": "¿Cual de las siguientes opciones es un sistema operativo movil desarrollado por Google?",
+            "st": "Windows",
+            "nd": "iOS",
+            "rd": "Linux",
+            "th": "Android",
+            "c":3
+        },
+        {
+            "q": "¿Cual de los siguientes programas te ofrece una hoja de calculo?",
+            "st": "Excel",
+            "nd": "Powerpoint",
+            "rd": "Word",
+            "th": "Bloc de notas",
+            "c":0
+        },
+        {
+            "q": "¿Que componente de hardware es responsable de procesar calculos y ejecutar instrucciones en una computadora?",
+            "st": "Tarjeta de sonido",
+            "nd": "Memoria RAM",
+            "rd": "Procesador (CPU)",
+            "th": "Tarjeta grafica (GPU)",
+            "c":2
+        },
+        {
+            "q": "¿Que dispositivo se utiliza para conectar multiples dispositivos en una red local?",
+            "st": "Cable Ethernet",
+            "nd": "Procesador (CPU)",
+            "rd": "Teclado",
+            "th": "Cable de Poder",
+            "c":0
+        },
+        {
+            "q": "¿A que hacen referencia las siglas HTTP?",
+            "st": "Particiones de Tareas y Trabajo a Horario",
+            "nd": "Protocolo de Transferencia de HiperTextos",
+            "rd": "Horario de Puestos de Trabajo Temporales",
+            "th": "Protocolo de Tareas en Tiempos Hiperrapidos",
+            "c":1
+        }
+]
+}
