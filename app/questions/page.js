@@ -55,12 +55,15 @@ export default function Preguntas() {
             setTimeout(()=>{
                 setTimer(maxTime);
                 setTimerStarted(false)
-                setCurrQ(currQ+1)
-                setHasSelected(false)
+                if(currQ < randomOrder[randomNumber].length-2){
+                    setCurrQ(currQ+1)
+                    setHasSelected(false)
+                }else{
+                    push(`/results?name=${data.get('name')}&points=${points}&theme=${data.get('theme')}`)
+                }
+               
             },4000)
             
-        }else if(currQ >= randomOrder[randomNumber].length-1){
-                push(`/results?name=${data.get('name')}&points=${points}&theme=${data.get('theme')}`)
         }
         console.log(`Length: ${randomOrder[randomNumber].length} CURR: ${currQ}`)
     },[hasSelected])
