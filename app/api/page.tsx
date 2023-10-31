@@ -15,6 +15,18 @@ export default async function Upload(props: Props) {
     }).catch(()=>{
         console.log("error")
     })
-    mongoClient.db().collection('Leaderboard').insertOne({name:props.searchParams.name,points:props.searchParams.points})
+
+    switch(props.searchParams.theme){
+        case 'General':
+            mongoClient.db().collection('Leaderboard').insertOne({name:props.searchParams.name,points:props.searchParams.points})
+            break
+        case 'Software':
+            mongoClient.db().collection('LeaderboardS').insertOne({name:props.searchParams.name,points:props.searchParams.points})
+            break
+        case 'Hardware':
+            mongoClient.db().collection('LeaderboardH').insertOne({name:props.searchParams.name,points:props.searchParams.points})
+            break
+    }
+    
     redirect(`/results?name=${props.searchParams.name}&points=${props.searchParams.points}&theme=${props.searchParams.theme}`)
 }

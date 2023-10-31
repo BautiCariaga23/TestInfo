@@ -11,7 +11,20 @@ type Props = {
 
 export default async function Results(props: Props) {
     const mongoClient = new MongoClient('mongodb+srv://buati2323:12872563b@cluster0.joggabu.mongodb.net/Leaderboard?retryWrites=true&w=majority');
-    const datab = await mongoClient.db().collection('Leaderboard').find({}).toArray();
+    let datab = []
+    switch(props.searchParams.theme){
+            case 'General':
+                datab = await mongoClient.db().collection('Leaderboard').find({}).toArray()
+                break
+
+            case 'Software':
+                datab = await mongoClient.db().collection('LeaderboardS').find({}).toArray()
+                break
+            
+            case 'Hardware':
+                datab = await mongoClient.db().collection('LeaderboardH').find({}).toArray()
+                break
+    }
     mongoose.connect("0.0.0.0/Leaderboard").
     then(()=>{
         console.log("connected")
