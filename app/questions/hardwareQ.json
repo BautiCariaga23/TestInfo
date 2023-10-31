@@ -9,7 +9,7 @@
             "c":-9
         },
         {
-            "q": "¿Cual de los siguientes componentes de hardware almacena temporalmente los datos de la computadora y permite un acceso mas rapido a ellos?",
+            "q": "¿Cual de los siguientes componentes almacena temporalmente los datos y permite un acceso mas rapido a ellos?",
             "st": "Disco duro",
             "nd": "Memoria RAM",
             "rd": "Procesador",
@@ -17,7 +17,7 @@
             "c":1
         },
         {
-            "q": "¿Cual de los siguientes dispositivos de entrada se utiliza comunmente para apuntar y hacer clic en objetos en la pantalla de una computadora?",
+            "q": "¿Cual de los siguientes dispositivos de entrada se utiliza comunmente para apuntar y hacer clic en la pantalla de una PC?",
             "st": "Teclado",
             "nd": "Monitor",
             "rd": "Mouse",

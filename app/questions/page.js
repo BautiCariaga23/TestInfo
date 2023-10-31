@@ -59,13 +59,17 @@ export default function Preguntas() {
                     setCurrQ(currQ+1)
                     setHasSelected(false)
                 }else{
-                    push(`/results?name=${data.get('name')}&points=${points}&theme=${data.get('theme')}`)
+                    if(option == theme.questions[randomOrder[randomNumber][currQ]].c){
+                        push(`/api?name=${data.get('name')}&points=${points + timer*10}&theme=${data.get('theme')}`)
+                    }else{
+                        push(`/api?name=${data.get('name')}&points=${points}&theme=${data.get('theme')}`)
+                    }
+                    
                 }
                
             },4000)
             
         }
-        console.log(`Length: ${randomOrder[randomNumber].length} CURR: ${currQ}`)
     },[hasSelected])
     
     return (

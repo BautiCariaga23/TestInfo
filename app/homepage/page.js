@@ -5,6 +5,7 @@ import Link from 'next/link'
 import "../globals.css"
 import "./styles.css"
 
+
 export default function HomePage() {
   return (
     <div>
