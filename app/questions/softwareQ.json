@@ -1,6 +1,14 @@
 {
     "questions": [
         {
+            "q": "",
+            "st": "",
+            "nd": "",
+            "rd": "",
+            "th": "",
+            "c":-9
+        },
+        {
             "q": "¿Cual de los siguientes sistemas operativos es de codigo abierto?",
             "st": "Windows",
             "nd": "MacOS",

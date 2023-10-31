@@ -12,8 +12,8 @@ export default function Preguntas() {
     const {push} = useRouter()
     let theme = softwareq
     const randomOrder = [
-        [1,5,3,2,4,0,0],
-        [0,6,1,5,3,9,2,10,0],
+        [1,5,3,2,4,6,0],
+        [1,7,2,6,4,10,3,11,0],
         [9,4,2,1,3,5,6,8,0]
     ]
     switch(data.get('theme')){
