@@ -2,6 +2,7 @@ import { MongoClient } from "mongodb";
 import mongoose from "mongoose";
 import { redirect } from "next/navigation";
 
+
 type Props = {
     params:{},
     searchParams: {[key:string]: string | string[] | undefined},

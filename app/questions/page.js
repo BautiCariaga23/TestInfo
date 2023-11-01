@@ -72,6 +72,10 @@ export default function Preguntas() {
         }
     },[hasSelected])
     
+    const buttonsText = [theme.questions[randomOrder[randomNumber][currQ]].st,
+    theme.questions[randomOrder[randomNumber][currQ]].nd,
+    theme.questions[randomOrder[randomNumber][currQ]].rd,
+    theme.questions[randomOrder[randomNumber][currQ]].th]
     return (
         <main className='h-screen text-black'>
             <div className={`${hasSelected ? 'show gofade' : 'hide '} opacity-0 z-50 grid place-items-center absolute h-screen w-full bg-black`}>
@@ -98,7 +102,7 @@ export default function Preguntas() {
                 absolute text-red-500 text-7xl md:text-8xl bg-transparent`}>INCORRECTO!</h1>
             </div>
             <div className='flex justify-between py-3 px-1'>
-            <div className='block'>
+            <div>
             <h1 className='text-gray-400 text-xl'>-{data.get('theme')}</h1>
             <h1 className='text-gray-400 absolute text-lg'>- {currQ+1} / {randomOrder[randomNumber].length-1}</h1>
             </div>
@@ -112,49 +116,19 @@ export default function Preguntas() {
                 </h1>
                 <hr className='border-[1px] mt-9 border-gray-400 w-full'/>
                 <div className='grid mt-2 overflow-hidden w-full place-items-center'>
-                    <button onClick={()=>{
-                        if(!hasSelected && timer >0){
-                            setOption(0)
-                            setHasSelected(true);
-                        }
-                        
-                    }} className={`${hasSelected ? 0 == theme.questions[randomOrder[randomNumber][currQ]].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                     ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
-                     hover:text-white hover:translate-y-[-5px] duration-150`}>
-                        {theme.questions[randomOrder[randomNumber][currQ]].st}</button>
-
-                    <button onClick={()=>{
-                        if(!hasSelected && timer >0){
-                            setOption(1)
-                            setHasSelected(true);
-                        }
-                        
-                    }} className={`${hasSelected ? 1 == theme.questions[randomOrder[randomNumber][currQ]].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                    ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
-                     hover:text-white hover:translate-y-[-5px] duration-150`}>
-                        {theme.questions[randomOrder[randomNumber][currQ]].nd}</button>
-                        
-                    <button onClick={()=>{
-                        if(!hasSelected && timer >0){
-                            setOption(2)
-                            setHasSelected(true);
-                        }
-                        
-                    }} className={`${hasSelected ? 2 == theme.questions[randomOrder[randomNumber][currQ]].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                    ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
-                    hover:text-white hover:translate-y-[-5px] duration-150`}>
-                        {theme.questions[randomOrder[randomNumber][currQ]].rd}</button>
-
-                    <button onClick={()=>{
-                        if(!hasSelected && timer >0){
-                            setOption(3)
-                            setHasSelected(true);
-                        }
-                       
-                    }} className={`${hasSelected ? 3 == theme.questions[randomOrder[randomNumber][currQ]].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
-                     ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
-                    hover:text-white hover:translate-y-[-5px] duration-150`}>
-                        {theme.questions[randomOrder[randomNumber][currQ]].th}</button>
+                    {buttonsText.map((el,i)=>{
+                        return(
+                            <button onClick={()=>{
+                                if(!hasSelected && timer >0){
+                                    setOption(i)
+                                    setHasSelected(true);
+                                }
+                            }} className={`${hasSelected ? i == theme.questions[randomOrder[randomNumber][currQ]].c ? 'bg-lime-600': 'bg-red-500' : 'bg-gray-300'} p-2 rounded-lg w-72 mt-5 hover:rounded-xl
+                             ${hasSelected ? 'text-white': 'text-black goappear'} hover:${hasSelected ? '' : 'bg-gray-400'}
+                             hover:text-white hover:translate-y-[-5px] duration-150`}>
+                                {el}</button>
+                        )
+                    })}
                 </div>
             </div>
             <footer className='absolute flex justify-between w-full bottom-4 p-3 text-white'>
@@ -163,7 +137,6 @@ export default function Preguntas() {
             stroke="currentColor" class="w-5 h-5 mr-1">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
             </svg>
-
                 <p>Volver al inicio</p>
                 </div></Link>
                 <div>
